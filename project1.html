@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+  <title>Yugaspark Portfolio</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin-bottom: 0.3rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding-bottom: 3px;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav a.active,
+    nav a:hover {
+      border-color: yellow;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      color: #007acc;
+    }
+
+    /* About Me */
+    #about p {
+      font-size: 1.1rem;
+    }
+
+    /* Projects Grid */
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #004a99;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Contact Form */
+    #contact form {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    #contact label {
+      display: block;
+      margin: 0.7rem 0 0.3rem;
+    }
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #contact button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover {
+      background: #005f99;
+    }
+  </style>
+</head>
+<body>
+<img src="RGMLOGO.jpg" width="100px" height="100px">
+<h2>RAJEEV GANDHI MEMORIAL COLLEGE OF ENGINEERING AND TECHNOLOGY</h2>
+<header>
+  <h1>Welcome to Yugaspark</h1>
+  <p>"The best teams are the ones that grow together. We're excited to keep growing with you"</p>
+  <nav>
+    <a href="#about" class="active">About Us</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about us">
+    <h2>About Me</h2>
+    <p>we will Help you
+        Improved Problem Solving: Working together allows team members to combine their diverse skills and perspectives, leading to more creative and effective solutions.
+
+Faster Development: Collaboration helps distribute tasks efficiently, speeding up coding and project completion by leveraging each member’s strengths.
+
+Knowledge Sharing: Team members learn from each other, enhancing their skills and avoiding repeated mistakes, which leads to better code quality overall.
+
+Enhanced Code Quality: Through code reviews and pair programming, collaboration helps catch bugs early and ensures adherence to best practices and standards.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project One</h3>
+      <p>A responsive portfolio website built with HTML and CSS showcasing my work and skills.</p>
+    </div>
+    <div class="project-card">
+      <h3>Project Two</h3>
+      <p>A JavaScript-powered todo app with local storage support for managing daily tasks.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+
+    <h2>Contact Us</h2>
+    <form onsubmit="return false;">
+      <label for="name">First Name:</label>
+      <input type="text" id="name" placeholder="Enter Your First Name" required />
+    
+      <label for="name">Last Name:</label>
+      <input type="text" id="name" placeholder="Enter Your First Name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Your email" required />
+      <label for="contactNumber">Contact Number:</label><br />
+      <input
+      type="tel"
+      id="contactNumber"
+      name="contactNumber"
+      pattern="[0-9]{10}"
+      placeholder="Enter 10-digit number"
+      required
+    <input type="checkbox" id="male" name="gender" value="Male" />
+    <label for="male">Male</label><br />
+    
+    <input type="checkbox" id="female" name="gender" value="Female" />
+    <label for="female">Female</label><br />
+    
+    <input type="checkbox" id="other" name="gender" value="Other" />
+    <label for="other">Other</label>
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" placeholder="Your message"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
